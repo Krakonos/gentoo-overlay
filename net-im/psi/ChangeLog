@@ -1,0 +1,7 @@
+# ChangeLog for net-im/psi
+
+*psi-9999 (30 Oct 2009)
+
+  30 Oct 2009; Ladislav Laska <ladislav.laska@gmail.com> +psi-9999.ebuild
+  New ebuild for git version of psi with plugins enabled.
+
