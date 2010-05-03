@@ -1,0 +1,25 @@
+diff -u -r a/Makefile b/Makefile
+--- a/Makefile	2008-04-15 00:56:53.000000000 +0200
++++ b/Makefile	2009-04-28 12:10:20.000000000 +0200
+@@ -4,16 +4,17 @@
+ LIBS=-lusb -lsndfile -lm
+ BINS=odvr odvr.x86
+ X86LIBS=-L$(HOME)/build/lib32
+-PREFIX=/usr/local
+-SYSCONFDIR=/etc
++PREFIX=$(DESTDIR)/usr
++SYSCONFDIR=$(DESTDIR)/etc
+ VERSION=0.1.4.1
+ 
+ all: odvr
+ 
+ install: odvr
++	mkdir -p $(PREFIX)/bin
++	mkdir -p $(SYSCONFDIR)/udev/rules.d
+ 	install -o root -g root -m 755 odvr $(PREFIX)/bin
+-	-lsb_release -a 2>/dev/null | grep -q Ubuntu && install -o root -g root -m 644 \
+-		41-odvr.rules $(SYSCONFDIR)/udev/rules.d/ && /etc/init.d/udev reload
++	install -o root -g root -m 644 41-odvr.rules $(SYSCONFDIR)/udev/rules.d/
+ 
+ release: $(BINS)
+ 	-rm -rf debpkg/usr debpkg/etc
