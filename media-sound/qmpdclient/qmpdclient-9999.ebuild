@@ -66,7 +66,7 @@ src_install() {
 	qt4-r2_src_install
 	for res in 16 22 64 ; do
 		insinto /usr/share/icons/hicolor/${res}x${res}/apps/
-		newins icons/qmpdclient${res}.png ${PN}.png || die "Installing icons failed"
+		newins icons/${res}x${res}/qmpdclient.png ${PN}.png || die "Installing icons failed"
 	done
 
 	#install translations
