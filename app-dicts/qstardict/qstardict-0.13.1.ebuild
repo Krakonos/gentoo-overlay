@@ -18,10 +18,12 @@ RDEPEND="
 		  x11-libs/qt-gui )
 		=x11-libs/qt-4.3*
 	)
-	dbus? ( || ( x11-libs/qt-dbus <x11-libs/qt-4.4[dbus] ) )
+	dbus? ( x11-libs/qt-dbus )
 	>=dev-libs/glib-2.0"
 DEPEND="${RDEPEND}"
 PROVIDE="virtual/stardict"
+
+PATCHES=("${FILESDIR}/gcc-4.4.1-compatibility.patch" "${FILESDIR}/gcc-4.5.1-compatibility.patch")
 
 src_compile() {
 	QMAKE_FLAGS=""
