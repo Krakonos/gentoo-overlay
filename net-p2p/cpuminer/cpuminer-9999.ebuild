@@ -29,3 +29,11 @@ src_configure() {
 	sed -i 's:INSTALL = /usr/bin/install -c:INSTALL = /usr/bin/install -m 755:' \
 		Makefile x86_64/Makefile
 }
+
+
+src_install() {
+	emake DESTDIR="${D}" install || die
+
+	newinitd ${FILESDIR}/initd.minerd minerd || die
+	newconfd ${FILESDIR}/confd.minerd minerd || die
+}

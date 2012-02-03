@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+source /etc/conf.d/minerd
+
+depend() {
+	use net
+}
+
+start() {
+	ebegin "Starting minerd"
+	start-stop-daemon -S -b -m -p /var/run/minerd.pid -u $MINERD_USER -- /usr/bin/minerd $MINERD_ARGS
+	eend $ST
+}
+
+stop() {
+	ebegin "Stopping minerd"
+	start-stop-daemon -K -p /var/run/minerd.pid minerd
+	eend $?
+}

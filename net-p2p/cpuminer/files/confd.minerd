@@ -1,0 +1,3 @@
+# System user that minerd should run under
+MINERD_USER=nobody:nogroup
+MINERD_ARGS="--url pool --userpass username:userpass --syslog --quiet"
