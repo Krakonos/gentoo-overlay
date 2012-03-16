@@ -9,7 +9,7 @@ EAPI=4
 DESCRIPTION="Cpuminer for litecoin."
 HOMEPAGE="https://github.com/pooler/cpuminer"
 EGIT_REPO_URI="https://github.com/pooler/cpuminer.git"
-EGIT_BRANCH="cpumine"
+#EGIT_BRANCH="cpumine"
 
 LICENSE=""
 SLOT="0"
