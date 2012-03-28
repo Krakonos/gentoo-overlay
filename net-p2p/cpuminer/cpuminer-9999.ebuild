@@ -13,7 +13,7 @@ EGIT_REPO_URI="https://github.com/pooler/cpuminer.git"
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
