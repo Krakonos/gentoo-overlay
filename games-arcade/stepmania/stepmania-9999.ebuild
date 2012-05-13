@@ -65,11 +65,13 @@ src_install() {
 	fi
 
 	insinto "${dir}"
-	doins -r Announcers BGAnimations Characters Courses Data Docs \
-	BackgroundEffects  BackgroundTransitions NoteSkins Songs Themes || die "doins failed"
+	doins -r Announcers BGAnimations Characters Courses Data \
+	BackgroundEffects  BackgroundTransitions NoteSkins Themes || die "doins failed"
 
-	newicon "Themes/default/Graphics/Common	window icon.png" ${PN}.png
-	make_desktop_entry ${PN} StepMania
+	newdoc Songs/instructions.txt song-instructions.txt
+
+	#newicon "Themes/default/Graphics/Common	window icon.png" ${PN}.png
+	#make_desktop_entry ${PN} StepMania
 
 	games_make_wrapper ${PN} "${dir}"/${PN} "${dir}"
 	prepgamesdirs
