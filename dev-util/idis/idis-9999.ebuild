@@ -24,11 +24,11 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	cd src
-	emake || die "emake failed."
+	emake PREFIX=/usr || die "emake failed."
 }
 
 src_install() {
 	cd src
-	make PREFIX=/usr DESTDIR=${D}/usr install || die "install failed"
+	make PREFIX=/usr DESTDIR=${D} install || die "install failed"
 }
 
