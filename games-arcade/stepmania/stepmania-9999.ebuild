@@ -8,17 +8,13 @@ inherit games mercurial autotools
 
 EHG_REPO_URI="https://code.google.com/p/sm-ssc/"
 
-DESCRIPTION=""
-HOMEPAGE=""
-SRC_URI=""
+DESCRIPTION="The dance simulator."
+HOMEPAGE="http://www.stepmania.com/"
 
-LICENSE=""
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="debug ffmpeg gtk jpeg mad vorbis"
-
-DEPEND=""
-RDEPEND="${DEPEND}"
 
 RDEPEND="gtk? ( x11-libs/gtk+:2 )
 	mad? ( media-libs/libmad )
@@ -35,9 +31,11 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 
+PATCHES=( "${FILESDIR}/remap.diff" )
 
 src_prepare() {
 	eautoreconf
+	base_src_prepare
 }
 
 src_configure() {
