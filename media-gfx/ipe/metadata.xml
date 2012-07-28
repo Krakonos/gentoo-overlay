@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>laska@kam.mff.cuni.cz</email>
+		<name>Ladislav Láska</name>
+	</maintainer>
+	<longdescription>Graphical tool for creating schematic drawings exportable to eps and simple use in latex documents.</longdescription>
+</pkgmetadata>

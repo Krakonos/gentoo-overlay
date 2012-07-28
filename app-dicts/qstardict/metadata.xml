@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>qt</herd>
+	<maintainer>
+		<email>rion4ik@gmail.com</email>
+	</maintainer>
+	<maintainer>
+		<email>laska@kam.mff.cuni.cz</email>
+		<name>Ladislav Láska</name>
+	</maintainer>
+	<longdescription>Cool stardict clone written with Qt</longdescription>
+</pkgmetadata>

@@ -28,8 +28,7 @@ RDEPEND="gtk? ( x11-libs/gtk+:2 )
 	virtual/opengl
 	virtual/glu"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
-
+	virtual/pkgconfig"
 
 PATCHES=( "${FILESDIR}/remap.diff" )
 
@@ -76,4 +75,3 @@ src_install() {
 
 	einfo "Copy your music into ${dir}."
 }
-

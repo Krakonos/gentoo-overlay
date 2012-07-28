@@ -8,7 +8,7 @@ DESCRIPTION="A drawing editor for creating figures in PDF or (encapsulated) Post
 HOMEPAGE="http://ipe7.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ipe7/${P}-src.tar.gz"
 
-LICENSE=""
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
@@ -27,5 +27,5 @@ src_compile() {
 
 src_install() {
 	cd src
-	emake IPEPREFIX=${D}/usr install || die
+	emake IPEPREFIX="${D}/usr" install || die
 }

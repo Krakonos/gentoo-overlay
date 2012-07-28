@@ -16,7 +16,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND="
-	dev-libs/libyaml 
+	dev-libs/libyaml
 	>=dev-lang/python-3.0
 	>=x11-libs/gtk+-3.0"
 DEPEND="${RDEPEND}
@@ -29,6 +29,5 @@ src_compile() {
 
 src_install() {
 	cd src
-	make PREFIX=/usr DESTDIR=${D} install || die "install failed"
+	make PREFIX=/usr DESTDIR="${D}" install || die "install failed"
 }
-

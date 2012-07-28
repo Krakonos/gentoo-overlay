@@ -8,7 +8,7 @@ DESCRIPTION="A simple around httperf generating nice CSV stats & graphs."
 HOMEPAGE="http://www.xenoclast.org/autobench/"
 SRC_URI="http://www.xenoclast.org/autobench/downloads/autobench-${PV}.tar.gz"
 
-LICENSE="GNU"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="gnuplot"
@@ -24,7 +24,6 @@ src_compile() {
 }
 
 src_install() {
-	emake PREFIX=${D} ROOTBIN_PREFIX=/usr ROOTMAN_PREFIX=/usr/share \
+	emake PREFIX="${D}" ROOTBIN_PREFIX=/usr ROOTMAN_PREFIX=/usr/share \
 	AB_CFG=/etc/autobench.conf install || die "make install failed."
-	
 }

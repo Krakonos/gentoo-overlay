@@ -1,13 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+
+EAPI=2
 
 inherit eutils
 
 DESCRIPTION="XnView MP image viewer/converter"
 HOMEPAGE="http://www.xnview.com/"
 SRC_URI="x86? ( http://download.xnview.com/XnViewMP-linux.tgz )"
-
 
 SLOT="0"
 LICENSE="free-noncomm as-is"
@@ -43,11 +44,7 @@ exec /opt/XnView/xnview "\$@"
 EOF
 	fperms 0755 /opt/bin/xnview
 
-
 	# Install icon and .desktop for menu entry
 	newicon "${D}"${XNVIEW_HOME}/xnview.png ${PN}.png
 	make_desktop_entry xnview XnviewMP ${PN} "Graphics" || die "desktop file sed failed"
-
-
 }
-

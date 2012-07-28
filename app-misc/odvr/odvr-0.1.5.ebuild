@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -14,13 +14,12 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="
-		dev-libs/libusb 
+		dev-libs/libusb
 		media-libs/libsndfile"
 
 RDEPEND="
-		sys-fs/udev 
-		dev-libs/libusb 
-		media-libs/libsndfile"
+		${DEPEND}
+		sys-fs/udev"
 
 src_compile() {
 	emake || die "emake failed"

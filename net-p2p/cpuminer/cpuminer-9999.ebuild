@@ -2,23 +2,22 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit git-2
-
 EAPI=4
+
+inherit git-2
 
 DESCRIPTION="Cpuminer for litecoin."
 HOMEPAGE="https://github.com/pooler/cpuminer"
 EGIT_REPO_URI="https://github.com/pooler/cpuminer.git"
 #EGIT_BRANCH="cpumine"
 
-LICENSE=""
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}"
-
 
 src_prepare() {
 	./autogen.sh
@@ -30,10 +29,9 @@ src_configure() {
 		Makefile x86_64/Makefile
 }
 
-
 src_install() {
 	emake DESTDIR="${D}" install || die
 
-	newinitd ${FILESDIR}/initd.minerd minerd || die
-	newconfd ${FILESDIR}/confd.minerd minerd || die
+	newinitd "${FILESDIR}"/initd.minerd minerd || die
+	newconfd "${FILESDIR}"/confd.minerd minerd || die
 }

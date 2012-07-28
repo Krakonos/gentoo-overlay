@@ -13,11 +13,13 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="
-	dev-libs/libyaml 
-	>=dev-lang/swig-2.0.4
+RDEPEND="
+	dev-libs/libyaml
+	>=x11-libs/gtk+-2.0
 	>=dev-lang/python-3.0"
-RDEPEND="${DEPEND}"
+DEPEND="
+	${RDEPEND}
+	>=dev-lang/swig-2.0.4"
 
 src_compile() {
 	cd src
@@ -26,6 +28,5 @@ src_compile() {
 
 src_install() {
 	cd src
-	make PREFIX=${D}/usr install
+	make PREFIX="${D}/usr" install
 }
-

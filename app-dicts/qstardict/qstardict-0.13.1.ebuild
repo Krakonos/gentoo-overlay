@@ -1,4 +1,4 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ia64"
 IUSE="dbus nls"
 RDEPEND="
- || ( 
+	|| (
 		( x11-libs/qt-core
 		  x11-libs/qt-gui )
 		=x11-libs/qt-4.3*
@@ -21,7 +21,6 @@ RDEPEND="
 	dbus? ( x11-libs/qt-dbus )
 	>=dev-libs/glib-2.0"
 DEPEND="${RDEPEND}"
-PROVIDE="virtual/stardict"
 
 PATCHES=("${FILESDIR}/gcc-4.4.1-compatibility.patch" "${FILESDIR}/gcc-4.5.1-compatibility.patch")
 
@@ -40,4 +39,3 @@ src_compile() {
 src_install() {
 	emake INSTALL_ROOT="${D}" install || die "emake install filed"
 }
-
