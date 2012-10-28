@@ -2,9 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=1
+EAPI=2
 
-inherit eutils qt4 subversion
+inherit eutils qt4-r2 subversion
+
 DESCRIPTION="QStarDict is a StarDict clone written with using Qt"
 HOMEPAGE="http://qstardict.ylsoftware.com/"
 ESVN_REPO_URI="https://qstardict.svn.sourceforge.net/svnroot/qstardict/trunk"
