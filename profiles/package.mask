@@ -1,3 +1,4 @@
 # Ladislav Láska <ladislav.laska@gmail.com> (30 Oct 2009)
 # Live psi ebuilds with bleeding-edge features
 =net-im/psi-9999
+=app-dicts/qstardict-9999
