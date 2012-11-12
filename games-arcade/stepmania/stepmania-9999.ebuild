@@ -30,6 +30,7 @@ RDEPEND="gtk? ( x11-libs/gtk+:2 )
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
+EPATCH_OPTS=" --binary "
 PATCHES=( "${FILESDIR}/remap.diff" )
 
 src_prepare() {

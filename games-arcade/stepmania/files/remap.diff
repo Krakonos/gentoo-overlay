@@ -13,3 +13,4 @@ diff -r 2f1f34ae1cc8 src/InputMapper.cpp
  		AutoMappingEntry( 0, JOY_BUTTON_4,      DANCE_BUTTON_RIGHT,     false ),
  		AutoMappingEntry( 0, JOY_BUTTON_7,      DANCE_BUTTON_UPRIGHT,   false ),
  		AutoMappingEntry( 0, JOY_BUTTON_8,      DANCE_BUTTON_UPLEFT,    false ),
+
