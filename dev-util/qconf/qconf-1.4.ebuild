@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-inherit qt4
+inherit qt4-r2
 
 DESCRIPTION="XML based generator of configure scripts for Qt4 apps"
 HOMEPAGE="http://delta.affinix.com/qconf/"
