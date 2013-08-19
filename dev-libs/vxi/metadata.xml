@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>laska@kam.mff.cuni.cz</email>
+		<name>Ladislav Laska</name>
+	</maintainer>
+	<longdescription>An opensource VXI-11 implementation, the TCP interface for VISA.</longdescription>
+</pkgmetadata>
