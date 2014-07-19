@@ -19,7 +19,8 @@ RDEPEND="
 	>=dev-libs/openssl-1.0.0
 	>=dev-libs/libevent-1.4.0
 "
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	sys-devel/automake:1.11"
 
 src_prepare() {
 	./bootstrap
