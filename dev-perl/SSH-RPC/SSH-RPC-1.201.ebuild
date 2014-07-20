@@ -19,6 +19,7 @@ RDEPEND="dev-perl/Net-OpenSSH
 	dev-perl/JSON
 	dev-perl/Class-InsideOut"
 DEPEND="test? ( dev-perl/Test-Pod )
+	virtual/perl-Module-Build
      $RDEPEND"
 
 SRC_TEST=do
