@@ -19,7 +19,7 @@ perl_meta_runtime() {
 	# Carp
 	echo dev-lang/perl
 	# Class::ISA
-	echo virtual/perl-Class-ISA
+	echo dev-perl/Class-ISA
 	# Exporter
 	echo virtual/perl-Exporter
 	# Scalar::Util 1.09 ( 1.90.0 )
