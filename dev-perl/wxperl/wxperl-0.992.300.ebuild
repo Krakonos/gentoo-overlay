@@ -5,9 +5,9 @@
 EAPI=5
 
 MY_PN=Wx
-WX_GTK_VER="2.9"
+WX_GTK_VER="3.0"
 MODULE_AUTHOR=MDOOTSON
-MODULE_VERSION=0.9917
+MODULE_VERSION=0.9923
 inherit wxwidgets perl-module
 
 DESCRIPTION="Perl bindings for wxGTK"
@@ -20,7 +20,7 @@ IUSE=""
 RDEPEND="
 	>=dev-perl/Alien-wxWidgets-0.25
 	>=virtual/perl-File-Spec-0.82
-	x11-libs/wxGTK:2.9
+	x11-libs/wxGTK:3.0
 "
 DEPEND="${RDEPEND}
 	>=virtual/perl-ExtUtils-ParseXS-0.22.03
