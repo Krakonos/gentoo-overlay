@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.640.0.ebuild,v 1.1 2013/08/25 06:20:52 patrick Exp $
 
-EAPI=4
+EAPI=5
 
 WX_GTK_VER="2.9"
 MODULE_AUTHOR=MDOOTSON

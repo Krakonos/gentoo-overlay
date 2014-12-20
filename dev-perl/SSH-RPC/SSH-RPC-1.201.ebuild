@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV/Text-CSV-1.210.0.ebuild,v 1.2 2011/09/03 21:05:22 tove Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=RIZEN
 MODULE_VERSION=$PV
